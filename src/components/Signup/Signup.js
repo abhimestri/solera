@@ -20,8 +20,8 @@ class Signup extends Component{
                     <Switch>
                         <Route path="/signup4"  component={Signup4}/>
                         <Route path="/signup3"  component={Signup3}/>
-                        <Route path="/signup2" component={Signup2}/>
-                        <Route path="/" exact  component={Signup1}/>
+                        <Route path="/signup2"  component={Signup2}/>
+                        <Route path="/" component={Signup1}/>
                     </Switch>
                 </div>
                 <Tracker track={this.props.curTrackPos}/>

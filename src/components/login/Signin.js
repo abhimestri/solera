@@ -33,10 +33,7 @@ class BodySignup1 extends Component{
                         <div className="m-5 w-9 h-9 bg-primary"></div>
                         <div className="m-5 w-9 h-9 bg-primary"></div>
                     </div>
-                    <Link to={{
-                        pathname:'/signup2',
-                        search : 'page=2'
-                    }} className="justify-self-center mt-10 rounded-full py-1.5 px-14 bg-primary outline-none text-WH font-thin">
+                    <Link className="justify-self-center mt-10 rounded-full py-1.5 px-14 bg-primary outline-none text-WH font-thin">
                         Next
                     </Link>
                 </div>
