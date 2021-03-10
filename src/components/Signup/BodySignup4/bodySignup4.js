@@ -2,7 +2,8 @@ import React,{ Component } from 'react'
 import Aux from '../../../HOC/aux'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-
+import './bodySignup4.module.css'
+import classes from './bodySignup4.module.css'
 class Body extends Component{
     
     componentDidMount(){
@@ -28,16 +29,23 @@ class Body extends Component{
                             <div className="flex">
                                 <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
                                     <p className="text-xs text-darkPrimary">Micro Economics</p>
-                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
-                                </div>
+                                    <label className={classes.container}>
+                                            <input type="checkbox"/>
+                                            <span className={classes.checkmark}></span>
+                                    </label>                                </div>
                                 <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
                                     <p className="text-xs text-darkPrimary">Macro Economics</p>
-                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
+                                    <label className={classes.container}>
+                                            <input type="checkbox"/>
+                                            <span className={classes.checkmark}></span>
+                                    </label>
                                 </div>
                                 <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
                                     <p className="text-xs text-darkPrimary">Neuroeconomics</p>
-                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
-                                </div>
+                                    <label className={classes.container}>
+                                            <input type="checkbox"/>
+                                            <span className={classes.checkmark}></span>
+                                    </label>                                </div>
                             </div>
                         </div>
                         <div className="mb-5 h-20">
@@ -45,19 +53,25 @@ class Body extends Component{
                             <div className="flex">
                                 <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
                                     <p className="text-xs text-darkPrimary">Digital Marketing</p>
-                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
-                                </div>
+                                    <label className={classes.container}>
+                                            <input type="checkbox"/>
+                                            <span className={classes.checkmark}></span>
+                                    </label>                                </div>
                                 <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
                                     <p className="text-xs text-darkPrimary">Trade Marketing</p>
-                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
-                                </div>
+                                    <label className={classes.container}>
+                                            <input type="checkbox"/>
+                                            <span className={classes.checkmark}></span>
+                                    </label>                                </div>
                                 <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
                                     <p className="text-xs text-darkPrimary">Personal MArketing</p>
-                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
-                                </div>
+                                    <label className={classes.container}>
+                                            <input type="checkbox"/>
+                                            <span className={classes.checkmark}></span>
+                                    </label>                                </div>
                             </div>
                         </div>
-                    
+                        <div className="cool"></div>
                 </div>
                 <div className="mt-10 flex m-auto h-full max-w-xl ">
                     <Link to={{

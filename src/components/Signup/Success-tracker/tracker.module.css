@@ -1,0 +1,17 @@
+.tracker {
+  transition: all 2ms;
+}
+
+@media (max-width: 1180px) {
+  .tracker {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+  }
+}
+
+@media (max-width: 780px) {
+  .tracker {
+    display: none;
+  }
+}

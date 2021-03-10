@@ -1,16 +1,8 @@
 import React,{ Component } from 'react'
 import Aux from '../../HOC/aux'
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
-
-class BodySignup1 extends Component{
-
-    componentDidMount(){
-        const temp = this.props.history.location.search
-        if(temp === ""){
-            this.props.onChangeTrackerPos(1)
-        }
-    }
+import { Link , Route,Switch} from 'react-router-dom'
+import ForgotPassword from './ForgotPswd/ForgotPassword'
+class SignIn extends Component{
 
     render(){
         return(
@@ -19,13 +11,13 @@ class BodySignup1 extends Component{
                     <p className="justify-self-center font-light mt-10 mb-20 text-3xl">
                             Log in
                     </p>
-                    <input className="justify-self-center rounded-full text-primary border-xsm outline-none border-border w-3/4 mb-10 h-4/6 pl-8 placeholder-primary" required placeholder="*Email"></input>
-                    <input className="justify-self-center rounded-full text-primary border-xsm outline-none border-border w-3/4 mb-10 h-4/6 pl-8 placeholder-primary" required placeholder="*Password"></input>
-                    <p>Forgot</p>
+                    <input className="justify-self-center rounded-full font-extralight text-extraDarkPrimary border-xsm outline-none border-border w-3/4 mb-10 h-4/6 pl-8 placeholder-extraDarkPrimary" required placeholder="Email"></input>
+                    <input className="justify-self-center rounded-full font-extralight text-extraDarkPrimary border-xsm outline-none border-border w-3/4 mb-10 h-4/6 pl-8 placeholder-extraDarkPrimary" required placeholder="Password"></input>
+                    <Link to="/forgotpswd" className="text-xs text-extraDarkPrimary font-extralight justify-self-end mr-20 mt-3 mb-7">Forgot Password</Link>
                     <div className="flex justify-self-center">
-                        <div className="h-light bg-darkBg w-36 mt-3"v></div>
+                        <div className="h-light w-36 mt-3 bg-gradient-to-l from-blue-700"></div>
                         <p className="text-primary ml-10 mr-10">Or</p>
-                        <div className="h-light bg-darkBg w-36 mt-3"></div>
+                        <div className="h-light w-36 mt-3 bg-gradient-to-r from-blue-700"></div>
                     </div>
                     <div className="justify-self-center flex mt-10 max-w-xl ">
                         <div className="m-5 w-9 h-9 bg-primary"></div>
@@ -42,10 +34,4 @@ class BodySignup1 extends Component{
         )
     }
 }
-const mapDispatchToProps = dispatch => {
-    return { 
-        onChangeTrackerPos : (pos) => dispatch({type : "TRACKER_POS" , changePos : pos })
-    }
-}
-
-export default connect(null,mapDispatchToProps)(BodySignup1)
+export default SignIn

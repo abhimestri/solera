@@ -7,16 +7,15 @@ module.exports = {
           xlg: '450px',
           light : '1.3px'
       },
+          gradientColorStops: theme => ({
+            'primary': '#FF7152',
+          }),
   },
     backgroundColor: theme => ({
       'primary': '#FF7152',
       'secondary' : '#BDBBBB',
       'darkBg' : '#47A6C2',
       'lightBg' : '#D5EAF0',
-     }),
-     gradientColorStops: theme => ({
-      ...theme('colors'),
-      'primary': '#FF7152',
      }),
     borderColor: theme => ({
       ...theme('colors'),
@@ -25,6 +24,7 @@ module.exports = {
     }),
     placeholderColor: {
       'primary': '#47A6C2',
+      'extraDarkPrimary' : '#04536A ',
     },
     borderWidth: {
       'xsm':'0.1px',
@@ -35,6 +35,7 @@ module.exports = {
     textColor: {
       'primary': '#47A6C2',
       'darkPrimary' :'#0C92B9',
+      'extraDarkPrimary' : '#046D8B',
       'secondary': '#FF7152',
       'WH' : '#ffffff'
     },

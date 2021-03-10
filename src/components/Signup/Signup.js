@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Header from './Header/Header';
 import Signup1 from './BodySignup1/bodySignup1'
 import Signup2 from './BodySignup2/bodySignup2'
 import Signup3 from './BodySignup3/bodySignup3'
@@ -16,7 +15,6 @@ class Signup extends Component{
         return(
             <Aux>
                 <div>
-                    <Header/>
                     <Switch>
                         <Route path="/signup4"  component={Signup4}/>
                         <Route path="/signup3"  component={Signup3}/>
