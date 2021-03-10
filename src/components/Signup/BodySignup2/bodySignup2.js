@@ -29,19 +29,19 @@ class Body extends Component{
                     </p>
                     <input className="rounded-full text-primary border-xsm outline-none border-border w-3/4 mb-10 h-4/6 pl-8 placeholder-primary" placeholder="*First name"></input>
                     <input className="rounded-full text-primary border-xsm outline-none border-border w-3/4 mb-10 h-4/6 pl-8 placeholder-primary" placeholder="*Last name"></input>
-                    <div className="flex">
-                    <label className="align-self-start" for="birthday">*Birthday:</label>
-                    <input type="date" id="birthday" name="birthday"></input>
+                    <div className="flex justify-self-start">
+                        <label className="align-self-start ml-20 mt-3 text-primary" for="birthday">*Birthday:</label>
+                        <input className="rounded-full text-primary border-xsm outline-none border-border w-80 mb-10 h-4/6 pl-8 ml-9" type="date" id="birthday" name="birthday"></input>
                     </div>
-                    <div className="flex">
-                    <FormLabel component="legend">Gender</FormLabel>
-                    <RadioGroup aria-label="gender" name="gender1">
-                        <div className="flex">
-                            <FormControlLabel value="female" control={<Radio />} label="Female" />
-                            <FormControlLabel value="male" control={<Radio />} label="Male" />
-                            <FormControlLabel value="other" control={<Radio />} label="Other" />
-                        </div>
-                    </RadioGroup>
+                    <div className="flex ml-20 mt-5 justify-self-start">
+                        <label className="text-primary" component="legend">*Gender</label>
+                        <RadioGroup aria-label="gender" name="gender1">
+                            <div className="flex ml-12 -mt-2">
+                                <FormControlLabel className="text-primary" value="female" control={<Radio />} label="Female" />
+                                <FormControlLabel className="text-primary" value="male" control={<Radio />} label="Male" />
+                                <FormControlLabel className="text-primary" value="other" control={<Radio />} label="Other" />
+                            </div>
+                        </RadioGroup>
                     </div>
                 </div>
                 <div className="mt-40 flex mt-10 m-auto h-full max-w-xl ">

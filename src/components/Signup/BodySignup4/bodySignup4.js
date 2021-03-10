@@ -18,14 +18,48 @@ class Body extends Component{
     render(){
         return(
             <Aux>
-                <div className="grid justify-items-center mt-10 m-auto h-full max-w-xl">
-                    <p className="font-light mt-10 mb-20 text-3xl">
-                            Sign up
-                    </p>
-                    <input className="rounded-full text-primary border-xsm outline-none border-border w-3/4 mb-10 h-4/6 pl-8 placeholder-primary" placeholder="University \ school"></input>
-                    <input className="rounded-full text-primary border-xsm outline-none border-border w-3/4 mb-10 h-4/6 pl-8 placeholder-primary" placeholder="Program/School witch in University"></input>
+                <div className="overflow-scroll grid justify-items-center mt-10 m-auto mb-0 h-xlg max-w-3xl">
+                    <div className="h-10 mt-10 mb-9 grid justify-items-center">
+                        <p className="font-light m-auto text-3xl">Sign up</p>
+                        <p className="">Choose your subjects of interest</p>
+                    </div>
+                        <div className="mb-5 h-20">
+                            <p className="ml-2 mb-2 text-primary">Economics</p>
+                            <div className="flex">
+                                <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
+                                    <p className="text-xs text-darkPrimary">Micro Economics</p>
+                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
+                                </div>
+                                <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
+                                    <p className="text-xs text-darkPrimary">Macro Economics</p>
+                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
+                                </div>
+                                <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
+                                    <p className="text-xs text-darkPrimary">Neuroeconomics</p>
+                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mb-5 h-20">
+                            <p className="ml-2 mb-2 text-primary">Marketing</p>
+                            <div className="flex">
+                                <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
+                                    <p className="text-xs text-darkPrimary">Digital Marketing</p>
+                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
+                                </div>
+                                <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
+                                    <p className="text-xs text-darkPrimary">Trade Marketing</p>
+                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
+                                </div>
+                                <div className="w-44 h-7 flex rounded-full mr-3 py-1.5 px-5 bg-lightBg outline-none font-thin">
+                                    <p className="text-xs text-darkPrimary">Personal MArketing</p>
+                                    <input className="absolute ml-32 h-4 w-4" type="checkbox" />
+                                </div>
+                            </div>
+                        </div>
+                    
                 </div>
-                <div className="mt-40 flex mt-10 m-auto h-full max-w-xl ">
+                <div className="mt-10 flex m-auto h-full max-w-xl ">
                     <Link to={{
                         pathname:'/signup3',
                         search : 'page=3'

@@ -2,10 +2,17 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+      extend: {
+          height: {
+          xlg: '450px',
+          light : '1.3px'
+      },
+  },
     backgroundColor: theme => ({
       'primary': '#FF7152',
       'secondary' : '#BDBBBB',
+      'darkBg' : '#47A6C2',
+      'lightBg' : '#D5EAF0',
      }),
      gradientColorStops: theme => ({
       ...theme('colors'),
@@ -27,6 +34,7 @@ module.exports = {
     },
     textColor: {
       'primary': '#47A6C2',
+      'darkPrimary' :'#0C92B9',
       'secondary': '#FF7152',
       'WH' : '#ffffff'
     },
