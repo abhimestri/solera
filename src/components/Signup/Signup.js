@@ -1,21 +1,39 @@
 import React, { Component } from 'react'
 import Header from './Header/Header';
-import Body from '../Signup/body/body'
+import Signup1 from './BodySignup1/bodySignup1'
+import Signup2 from './BodySignup2/bodySignup2'
+import Signup3 from './BodySignup3/bodySignup3'
+import Signup4 from './BodySignup4/bodySignup4'
 import Tracker from '../Signup/Success-tracker/tracker'
 import Aux from '../../HOC/aux'
+import { Route,Switch } from 'react-router-dom'
+import { connect } from 'react-redux'
+
 
 class Signup extends Component{
+
     render(){
         return(
             <Aux>
                 <div>
                     <Header/>
-                    <Body/>
+                    <Switch>
+                        <Route path="/signup4"  component={Signup4}/>
+                        <Route path="/signup3"  component={Signup3}/>
+                        <Route path="/signup2" component={Signup2}/>
+                        <Route path="/" exact  component={Signup1}/>
+                    </Switch>
                 </div>
-                <Tracker/>
+                <Tracker track={this.props.curTrackPos}/>
             </Aux>
         )
     }
 }
 
-export default Signup
+const mapStateToProps = state => {
+    return {
+        curTrackPos : state.currentTrackerPosition
+    }
+}
+
+export default connect(mapStateToProps)(Signup)

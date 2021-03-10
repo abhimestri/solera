@@ -1,6 +1,21 @@
 import React,{ Component } from 'react'
 import Aux from '../../../HOC/aux'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+
 class Body extends Component{
+
+    componentDidMount(){
+        const temp = this.props.history.location.search
+        if(temp === ""){
+            console.log("nothing")
+        }else{
+            const value = temp.toString().split('=')[1]
+            this.props.onChangeTrackerPos(+value)
+
+        }
+    }
+
     render(){
         return(
             <Aux>
@@ -15,8 +30,14 @@ class Body extends Component{
                     </select>
                 </div>
                 <div className="mt-40 flex mt-10 m-auto h-full max-w-xl ">
-                    <button className="text-primary rounded-full ml-16 py-1.5 px-14 border-sm border-primary">Back</button>
-                    <button className="ml-auto mr-16 rounded-full mr-4 py-1.5 px-14 bg-primary outline-none text-WH font-thin">Next</button>
+                    <Link to={{
+                        pathname:'/signup2',
+                        search : 'page=2'
+                    }} className="text-primary rounded-full ml-16 py-1.5 px-14 border-sm border-primary">Back</Link>
+                    <Link to={{
+                        pathname:'/signup4',
+                        search : 'page=4'
+                    }} onClick={this.incrPos} className="ml-auto mr-16 rounded-full mr-4 py-1.5 px-14 bg-primary outline-none text-WH font-thin">Next</Link>
                 </div>
             </Aux>
 
@@ -24,4 +45,9 @@ class Body extends Component{
     }
 }
 
-export default Body
+const mapDispatchToprops = dispatch => {
+    return{
+        onChangeTrackerPos : (pos) => dispatch({type : "TRACKER_POS", changePos : pos})
+    }
+}
+export default connect(null,mapDispatchToprops)(Body)
