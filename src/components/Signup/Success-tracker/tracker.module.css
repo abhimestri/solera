@@ -1,7 +1,25 @@
 .tracker {
   transition: all 2ms;
 }
-
+.tracker > div > p {
+  background: -webkit-linear-gradient(left, #fa6a26, #fc9a6c, #fff);
+  background: -o-linear-gradient(right, #fa6a26, #fc9a6c, #fff);
+  background: -moz-linear-gradient(right, #fa6a26, #fc9a6c, #fff);
+  background: linear-gradient(to right, #fa6a26, #fc9a6c, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tracker > div > div {
+  background: rgb(255, 113, 82);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 113, 82, 1) 0%,
+    rgba(255, 113, 82, 1) 11%,
+    rgba(254, 123, 94, 1) 23%,
+    rgba(249, 185, 171, 1) 75%,
+    rgba(245, 236, 235, 1) 100%
+  );
+}
 @media (max-width: 1180px) {
   .tracker {
     position: absolute;
