@@ -1,12 +1,13 @@
 import React,{ Component } from 'react'
 import Aux from '../../HOC/aux'
-import { Link , Route,Switch} from 'react-router-dom'
-import ForgotPassword from './ForgotPswd/ForgotPassword'
+import { Link } from 'react-router-dom'
+import Header from '../Signup/Header/Header'
 class SignIn extends Component{
 
     render(){
         return(
             <Aux>
+                <Header/>
                 <div className="grid justify-items-stretch mt-10 m-auto h-full max-w-xl">
                     <p className="justify-self-center font-light mt-10 mb-20 text-3xl">
                             Log in

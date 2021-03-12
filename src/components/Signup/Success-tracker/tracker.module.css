@@ -1,6 +1,14 @@
 .tracker {
   transition: all 2ms;
 }
+.trackerForMobile {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+/*grid justify-items-center*/
 .tracker > div > p {
   background: -webkit-linear-gradient(left, #fa6a26, #fc9a6c, #fff);
   background: -o-linear-gradient(right, #fa6a26, #fc9a6c, #fff);
@@ -19,6 +27,34 @@
     rgba(249, 185, 171, 1) 75%,
     rgba(245, 236, 235, 1) 100%
   );
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+}
+.trackerForMobile > div > p {
+  background: -webkit-linear-gradient(left, #fa6a26, #fc9a6c, #fff);
+  background: -o-linear-gradient(right, #fa6a26, #fc9a6c, #fff);
+  background: -moz-linear-gradient(right, #fa6a26, #fc9a6c, #fff);
+  background: linear-gradient(to right, #fa6a26, #fc9a6c, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.trackerForMobile > div > div {
+  background: rgb(255, 113, 82);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 113, 82, 1) 0%,
+    rgba(255, 113, 82, 1) 11%,
+    rgba(254, 123, 94, 1) 23%,
+    rgba(249, 185, 171, 1) 75%,
+    rgba(245, 236, 235, 1) 100%
+  );
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+}
+.tracker > div {
+  display: block;
 }
 @media (max-width: 1180px) {
   .tracker {
@@ -31,5 +67,8 @@
 @media (max-width: 780px) {
   .tracker {
     display: none;
+  }
+  .trackerForMobile {
+    display: block;
   }
 }

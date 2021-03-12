@@ -7,13 +7,14 @@ import Tracker from '../Signup/Success-tracker/tracker'
 import Aux from '../../HOC/aux'
 import { Route,Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
-
+import Header from './Header/Header'
 
 class Signup extends Component{
 
     render(){
         return(
             <Aux>
+                <Header/>
                 <div>
                     <Switch>
                         <Route path="/signup4"  component={Signup4}/>

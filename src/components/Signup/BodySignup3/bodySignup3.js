@@ -19,7 +19,7 @@ class Body extends Component{
     render(){
         return(
             <Aux>
-                <div className="grid justify-items-center mt-10 m-auto h-full max-w-xl">
+                <div className="grid justify-items-center h-full max-w-xl mt-32 mobile:mt-32 sm:mt-10 m-auto">
                     <p className="font-light mt-10 mb-20 text-3xl">
                             Sign up
                     </p>
@@ -29,15 +29,17 @@ class Body extends Component{
                         <option className="text-primary" selected>Grade</option>
                     </select>
                 </div>
-                <div className="mt-40 flex mt-10 m-auto h-full max-w-xl ">
+                <div className="mb-10 mobile:flex mt-40 m-auto h-full max-w-xl">
                     <Link to={{
                         pathname:'/signup2',
                         search : 'page=2'
-                    }} className="text-primary rounded-full ml-16 py-1.5 px-14 border-sm border-primary">Back</Link>
+                    }} className="block mr-16 mb-5 sm:w-98 text-primary text-center rounded-full h-10 ml-16 py-2 px-14 border-sm border-primary">Back</Link>
                     <Link to={{
                         pathname:'/signup4',
                         search : 'page=4'
-                    }} onClick={this.incrPos} className="ml-auto mr-16 rounded-full mr-4 py-1.5 px-14 bg-primary outline-none text-WH font-thin">Next</Link>
+                    }} onClick={this.incrPos} className="ml-16 block sm:w-98 text-center mr-16 h-10 rounded-full py-2 px-14 bg-primary outline-none text-WH font-thin">
+                        Next
+                    </Link>
                 </div>
             </Aux>
 

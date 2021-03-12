@@ -1,0 +1,16 @@
+.dateField {
+  display: flex;
+  margin: 0 0 0 20px;
+}
+.dateInput {
+  width: 45vh;
+  height: 60%;
+}
+.genderField {
+  display: flex;
+}
+@media (min-width: 640px) {
+  .inputDate {
+    height: 20px;
+  }
+}

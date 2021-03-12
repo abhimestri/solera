@@ -4,13 +4,13 @@ import Aux from './HOC/aux'
 import { Route,Switch } from 'react-router-dom'
 import Signin from './components/login/Signin'
 import Forgotpassword from './components/login/ForgotPswd/ForgotPassword'
-import Header from './components/Signup/Header/Header'
+import FaceRegister from './components/FaceRegisteration/FaceRegister'
 class App extends Component {
   render(){
     return (
       <Aux>
-        <Header/>
           <Switch>
+            <Route path="/faceregister"  component={FaceRegister} />
             <Route path="/forgotpswd" component={Forgotpassword}/>
             <Route path="/signin" component={Signin}/>
             <Route path="/" component={Signup}/>

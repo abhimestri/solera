@@ -4,18 +4,33 @@ module.exports = {
   theme: {
       extend: {
           height: {
-          xlg: '450px',
-          light : '1.3px'
-      },
+              xlg: '450px',
+              light : '1.3px'
+          },
           gradientColorStops: theme => ({
             'primary': '#FF7152',
           }),
+          width: {
+            'Fit' : '45vh',
+            'Fit2' :"100%",
+            'stretch' : "75%",
+            '98' : '450px',
+            '100':'500px'
+          },borderRadius: {
+            'xtralg': '1rem',
+          },
+          screens: {
+            'sm':'640px',
+            'smtab' : '550px',
+            'mobile': '500px',
+          },
   },
     backgroundColor: theme => ({
       'primary': '#FF7152',
       'secondary' : '#BDBBBB',
       'darkBg' : '#47A6C2',
       'lightBg' : '#D5EAF0',
+      'darkPrimary' : '#066579',
      }),
     borderColor: theme => ({
       ...theme('colors'),
@@ -63,8 +78,10 @@ module.exports = {
      '6xl': '4rem',
     '7xl': '5rem',
    },
+   
   variants: {
     extend: {},
   },
   plugins: [],
+  important: true,
 }
