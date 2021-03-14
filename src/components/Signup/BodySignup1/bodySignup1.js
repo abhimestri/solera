@@ -19,7 +19,7 @@ class BodySignup1 extends Component{
     render(){
         return(
             <Aux>
-                <div className="grid justify-items-stretch mt-32 h-full max-w-xl mobile:mt-32 sm:mt-10 m-auto">
+                <div className="grid justify-items-stretch mt-32 h-full max-w-xl mobile:mt-16 sm:mt-10 m-auto md:mt-16">
                     <p className="justify-self-center font-light mt-10 mb-20 text-3xl">
                             Sign up
                     </p>

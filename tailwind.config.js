@@ -18,11 +18,19 @@ module.exports = {
             '100':'500px'
           },borderRadius: {
             'xtralg': '1rem',
+            'large' :'40px'
           },
           screens: {
             'sm':'640px',
             'smtab' : '550px',
             'mobile': '500px',
+          }, 
+          margin: {
+            sm: '8px',
+            md: '16px',
+            lg: '24px',
+            xl: '48px',
+            extraLarge : '75%',
           },
   },
     backgroundColor: theme => ({
@@ -78,7 +86,6 @@ module.exports = {
      '6xl': '4rem',
     '7xl': '5rem',
    },
-   
   variants: {
     extend: {},
   },

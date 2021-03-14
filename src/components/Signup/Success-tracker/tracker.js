@@ -8,7 +8,7 @@ class Tracker extends Component{
         return(
                 <Aux>
                     <div className={classes.tracker}>
-                        <div className="grid justify-items-center absolute top-1/5 left-default w-20">
+                        <div className="grid justify-items-center absolute top-1/5 mt-10 left-default w-20">
                             <p className={`mb-5 ${this.props.track === 1 ? 'text-9xl' : 'text-5xl'} TrackerText`}>1</p>
                             <div className="mb-6 rounded-full h-2 w-2"></div>
                             <div className="mb-2 rounded-full h-2 w-2 "></div>

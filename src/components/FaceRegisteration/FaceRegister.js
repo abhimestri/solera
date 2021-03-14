@@ -13,10 +13,10 @@ class FaceRegister extends Component{
             <Aux>
                 <Header/>
                 <Switch>
-                    <Route path="/faceregister/1" component={Body} />
                     <Route path="/faceregister/2" component={Body2} />
                     <Route path="/faceregister/3" component={Body3} />
                     <Route path="/faceregister/4" component={Body4} />
+                    <Route path="/faceregister" component={Body} />
                 </Switch>
             </Aux>
         )
